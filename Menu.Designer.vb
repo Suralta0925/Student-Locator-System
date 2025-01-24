@@ -17,17 +17,15 @@ Partial Class Menu
     End Sub
 
     Private Sub Active(B As Button)
-        Home.BackColor = Color.FromArgb(CByte(75), CByte(75), CByte(75))
-        Search.BackColor = Color.FromArgb(CByte(75), CByte(75), CByte(75))
-        Settings.BackColor = Color.FromArgb(CByte(75), CByte(75), CByte(75))
-        Map.BackColor = Color.FromArgb(CByte(75), CByte(75), CByte(75))
+        Home.BackColor = Color.FromArgb(CByte(128), CByte(0), CByte(0))
+        Search.BackColor = Color.FromArgb(CByte(128), CByte(0), CByte(0))
+        Settings.BackColor = Color.FromArgb(CByte(128), CByte(0), CByte(0))
+        Map.BackColor = Color.FromArgb(CByte(128), CByte(0), CByte(0))
 
-        Home.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(197), CByte(108), CByte(240))
-        Search.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(197), CByte(108), CByte(240))
-        Settings.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(197), CByte(108), CByte(240))
-        Map.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(197), CByte(108), CByte(240))
-
-
+        Home.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(177), CByte(57), CByte(57))
+        Search.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(177), CByte(57), CByte(57))
+        Settings.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(177), CByte(57), CByte(57))
+        Map.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(177), CByte(57), CByte(57))
 
 
 
@@ -35,8 +33,10 @@ Partial Class Menu
 
 
 
-        B.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(113), CByte(88), CByte(226))
-        B.BackColor = Color.FromArgb(CByte(113), CByte(88), CByte(226))
+
+
+        B.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(188), CByte(0), CByte(0))
+        B.BackColor = Color.FromArgb(CByte(188), CByte(0), CByte(0))
         Identifier.Text = B.Text
 
     End Sub
@@ -72,7 +72,7 @@ Partial Class Menu
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = Color.FromArgb(CByte(75), CByte(75), CByte(75))
+        Panel1.BackColor = Color.Maroon
         Panel1.Controls.Add(Logout)
         Panel1.Controls.Add(Settings)
         Panel1.Controls.Add(Map)
@@ -88,13 +88,13 @@ Partial Class Menu
         ' 
         ' Logout
         ' 
-        Logout.BackColor = Color.FromArgb(CByte(75), CByte(75), CByte(75))
+        Logout.BackColor = Color.DimGray
         Logout.Dock = DockStyle.Bottom
         Logout.FlatAppearance.BorderColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
         Logout.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(255), CByte(56), CByte(56))
         Logout.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(77), CByte(77))
         Logout.FlatStyle = FlatStyle.Flat
-        Logout.Font = New Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Logout.Font = New Font("Arial", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Logout.ForeColor = SystemColors.ButtonHighlight
         Logout.Image = My.Resources.Resources.logout
         Logout.Location = New Point(0, 951)
@@ -109,20 +109,20 @@ Partial Class Menu
         ' 
         ' Settings
         ' 
-        Settings.BackColor = Color.FromArgb(CByte(75), CByte(75), CByte(75))
+        Settings.BackColor = Color.Maroon
         Settings.Dock = DockStyle.Top
         Settings.FlatAppearance.BorderSize = 0
-        Settings.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(113), CByte(88), CByte(226))
-        Settings.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(197), CByte(108), CByte(240))
+        Settings.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(188), CByte(0), CByte(0))
+        Settings.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(179), CByte(57), CByte(57))
         Settings.FlatStyle = FlatStyle.Flat
-        Settings.Font = New Font("Arial Black", 11F, FontStyle.Bold)
+        Settings.Font = New Font("Arial Black", 11.0F, FontStyle.Bold)
         Settings.ForeColor = SystemColors.ButtonHighlight
         Settings.Image = My.Resources.Resources.setting
         Settings.ImageAlign = ContentAlignment.MiddleLeft
-        Settings.Location = New Point(0, 529)
+        Settings.Location = New Point(0, 604)
         Settings.Name = "Settings"
         Settings.Padding = New Padding(10, 0, 0, 0)
-        Settings.Size = New Size(281, 81)
+        Settings.Size = New Size(281, 106)
         Settings.TabIndex = 7
         Settings.Tag = "Setting"
         Settings.Text = "Settings"
@@ -130,20 +130,20 @@ Partial Class Menu
         ' 
         ' Map
         ' 
-        Map.BackColor = Color.FromArgb(CByte(75), CByte(75), CByte(75))
+        Map.BackColor = Color.Maroon
         Map.Dock = DockStyle.Top
         Map.FlatAppearance.BorderSize = 0
-        Map.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(113), CByte(88), CByte(226))
-        Map.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(197), CByte(108), CByte(240))
+        Map.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(188), CByte(0), CByte(0))
+        Map.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(179), CByte(57), CByte(57))
         Map.FlatStyle = FlatStyle.Flat
-        Map.Font = New Font("Arial Black", 11F, FontStyle.Bold)
+        Map.Font = New Font("Arial Black", 11.0F, FontStyle.Bold)
         Map.ForeColor = SystemColors.ButtonHighlight
         Map.Image = My.Resources.Resources.map
         Map.ImageAlign = ContentAlignment.MiddleLeft
-        Map.Location = New Point(0, 448)
+        Map.Location = New Point(0, 498)
         Map.Name = "Map"
         Map.Padding = New Padding(10, 0, 0, 0)
-        Map.Size = New Size(281, 81)
+        Map.Size = New Size(281, 106)
         Map.TabIndex = 6
         Map.Tag = "Map"
         Map.Text = "Map"
@@ -151,20 +151,20 @@ Partial Class Menu
         ' 
         ' Search
         ' 
-        Search.BackColor = Color.FromArgb(CByte(75), CByte(75), CByte(75))
+        Search.BackColor = Color.Maroon
         Search.Dock = DockStyle.Top
         Search.FlatAppearance.BorderSize = 0
-        Search.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(113), CByte(88), CByte(226))
-        Search.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(197), CByte(108), CByte(240))
+        Search.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(188), CByte(0), CByte(0))
+        Search.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(179), CByte(57), CByte(57))
         Search.FlatStyle = FlatStyle.Flat
-        Search.Font = New Font("Arial Black", 11F, FontStyle.Bold)
+        Search.Font = New Font("Arial Black", 11.0F, FontStyle.Bold)
         Search.ForeColor = SystemColors.ButtonHighlight
         Search.Image = My.Resources.Resources.search
         Search.ImageAlign = ContentAlignment.MiddleLeft
-        Search.Location = New Point(0, 363)
+        Search.Location = New Point(0, 388)
         Search.Name = "Search"
         Search.Padding = New Padding(10, 0, 0, 0)
-        Search.Size = New Size(281, 85)
+        Search.Size = New Size(281, 110)
         Search.TabIndex = 5
         Search.Tag = "Search"
         Search.Text = "Search"
@@ -172,20 +172,20 @@ Partial Class Menu
         ' 
         ' Home
         ' 
-        Home.BackColor = Color.FromArgb(CByte(113), CByte(88), CByte(226))
+        Home.BackColor = Color.Maroon
         Home.Dock = DockStyle.Top
         Home.FlatAppearance.BorderSize = 0
-        Home.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(113), CByte(88), CByte(226))
-        Home.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(125), CByte(95), CByte(255))
+        Home.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(188), CByte(0), CByte(0))
+        Home.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(179), CByte(57), CByte(57))
         Home.FlatStyle = FlatStyle.Flat
-        Home.Font = New Font("Arial Black", 11F, FontStyle.Bold)
+        Home.Font = New Font("Arial Black", 11.0F, FontStyle.Bold)
         Home.ForeColor = SystemColors.ButtonHighlight
         Home.Image = My.Resources.Resources.home
         Home.ImageAlign = ContentAlignment.MiddleLeft
         Home.Location = New Point(0, 278)
         Home.Name = "Home"
         Home.Padding = New Padding(10, 0, 0, 0)
-        Home.Size = New Size(281, 85)
+        Home.Size = New Size(281, 110)
         Home.TabIndex = 4
         Home.Tag = "Home"
         Home.Text = "Home"
@@ -223,17 +223,17 @@ Partial Class Menu
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = My.Resources.Resources.globe
-        PictureBox1.Location = New Point(63, 60)
+        PictureBox1.Image = My.Resources.Resources.images1
+        PictureBox1.Location = New Point(64, 62)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(129, 130)
+        PictureBox1.Size = New Size(132, 136)
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
         ' 
         ' Panel2
         ' 
-        Panel2.BackColor = Color.FromArgb(CByte(113), CByte(88), CByte(226))
+        Panel2.BackColor = Color.FromArgb(CByte(179), CByte(57), CByte(57))
         Panel2.Dock = DockStyle.Top
         Panel2.Location = New Point(0, 0)
         Panel2.Name = "Panel2"
@@ -242,7 +242,7 @@ Partial Class Menu
         ' 
         ' Panel3
         ' 
-        Panel3.BackColor = Color.FromArgb(CByte(125), CByte(95), CByte(255))
+        Panel3.BackColor = Color.FromArgb(CByte(179), CByte(57), CByte(57))
         Panel3.Controls.Add(Identifier)
         Panel3.Controls.Add(Button1)
         Panel3.Dock = DockStyle.Top

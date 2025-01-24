@@ -1,8 +1,9 @@
 ﻿Public Class LoginForm
-    Dim isLeft As Boolean = True
+    Public isLeft As Boolean = True
     Dim coverLength As Integer = 550
     Dim max As Integer = 255
     Dim min As Integer = 0
+
     Private Sub RegisterBtn_Click(sender As Object, e As EventArgs) Handles RegisterBtn.Click
         Anim.Start()
     End Sub
@@ -15,6 +16,8 @@
             CoverDesign.Left += 20
             CoverDesign.Width -= 20
             lognPanel.Left -= 20
+            username.Text = ""
+            password.Text = ""
             Dim Alpha As Integer = If((CoverDesign.Left < 275),
                 max - (((CoverDesign.Left / (coverLength / 2))) * max),
                         max * ((CoverDesign.Left - (coverLength / 2)) / (coverLength / 2)))
@@ -26,6 +29,7 @@
                 RegisterBtn.Text = "Login"
                 loginBtn.Text = "Register"
                 lblLogin.Text = "Register"
+
             End If
 
 
@@ -51,9 +55,12 @@
         ElseIf CoverDesign.Left = 0 And CoverDesign.Width > 488 And Not isLeft Then
             CoverDesign.Width -= 20
             lognPanel.Left += 20
+            username.Text = ""
+            password.Text = ""
 
         Else
             Greetings.Left = (CoverDesign.Width - Greetings.Width) \ 2
+            Logo.Left = (CoverDesign.Width - Logo.Width) \ 2
             SetControlOpacity(Greetings, 255)
             SetControlOpacity(Label1, 255)
             lognPanel.Left = If(Not isLeft, 500, 0)
@@ -118,7 +125,7 @@
     'End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Splash_Screen.Close()
+        loginDialog.Show()
     End Sub
 
     Private Sub RegisterBtn_MouseHover(sender As Object, e As EventArgs) Handles RegisterBtn.MouseEnter
@@ -147,6 +154,15 @@
         e.Graphics.DrawString(control.Text, control.Font, brush, New PointF(0, 0))
     End Sub
 
+
+    Private Sub RegisterPanel(ByVal originalPanel As Panel, ByVal Location As Point)
+        Dim newPanel As New Panel()
+        newPanel.Size = originalPanel.Size
+        newPanel.BorderStyle = originalPanel.BorderStyle
+        newPanel.Location = Location
+    End Sub
+
+
     Private Sub showPswrd_CheckedChanged(sender As Object, e As EventArgs) Handles showPswrd.CheckedChanged
         If showPswrd.Checked Then
             password.PasswordChar = ""
@@ -155,11 +171,23 @@
         End If
     End Sub
 
+    'TODO errors occured'
     Private Sub loginBtn_Click(sender As Object, e As EventArgs) Handles loginBtn.Click
-        If username.Text = "Vince0925" And password.Text = "Suralta123" Then
-            Menu.Show()
+        loginDialog.isButtonClicked = True
+        If isLeft Then
+            If DBUsername(username.Text, password.Text) Then
+                loginDialog.isButtonClicked = False
+                Menu.Show()
+                Me.Close()
+            ElseIf Not Database.Storedusername = username.Text Then
+                loginDialog.message.Text = "Username is not yet registered"
+                loginDialog.Show()
+            Else
+                loginDialog.Show()
+            End If
         Else
             loginDialog.Show()
         End If
     End Sub
+
 End Class

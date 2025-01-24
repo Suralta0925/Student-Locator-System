@@ -27,6 +27,7 @@ Partial Class LoginForm
         Panel3 = New Panel()
         Identifier = New Label()
         CoverDesign = New Panel()
+        Logo = New PictureBox()
         RegisterBtn = New Button()
         Label1 = New Label()
         Greetings = New Label()
@@ -45,6 +46,7 @@ Partial Class LoginForm
         Panel2 = New Panel()
         Panel3.SuspendLayout()
         CoverDesign.SuspendLayout()
+        CType(Logo, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         lognPanel.SuspendLayout()
@@ -56,7 +58,7 @@ Partial Class LoginForm
         ' 
         Button1.BackColor = Color.Red
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Arial", 12.0F)
+        Button1.Font = New Font("Arial", 12F)
         Button1.ForeColor = SystemColors.ButtonHighlight
         Button1.ImageAlign = ContentAlignment.TopLeft
         Button1.Location = New Point(1040, 5)
@@ -68,7 +70,7 @@ Partial Class LoginForm
         ' 
         ' Panel3
         ' 
-        Panel3.BackColor = Color.FromArgb(CByte(125), CByte(95), CByte(255))
+        Panel3.BackColor = Color.FromArgb(CByte(179), CByte(57), CByte(57))
         Panel3.Controls.Add(Identifier)
         Panel3.Controls.Add(Button1)
         Panel3.Dock = DockStyle.Top
@@ -80,7 +82,7 @@ Partial Class LoginForm
         ' Identifier
         ' 
         Identifier.AutoSize = True
-        Identifier.Font = New Font("Arial Black", 15.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Identifier.Font = New Font("Arial Black", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Identifier.ForeColor = SystemColors.ButtonHighlight
         Identifier.Location = New Point(506, 5)
         Identifier.Name = "Identifier"
@@ -90,25 +92,36 @@ Partial Class LoginForm
         ' 
         ' CoverDesign
         ' 
-        CoverDesign.BackColor = Color.FromArgb(CByte(84), CByte(109), CByte(229))
+        CoverDesign.BackColor = Color.Maroon
+        CoverDesign.Controls.Add(Logo)
         CoverDesign.Controls.Add(RegisterBtn)
         CoverDesign.Controls.Add(Label1)
         CoverDesign.Controls.Add(Greetings)
         CoverDesign.Location = New Point(0, 47)
         CoverDesign.Name = "CoverDesign"
-        CoverDesign.Size = New Size(508, 693)
+        CoverDesign.Size = New Size(513, 693)
         CoverDesign.TabIndex = 4
+        ' 
+        ' Logo
+        ' 
+        Logo.Image = My.Resources.Resources.images1
+        Logo.Location = New Point(180, 62)
+        Logo.Name = "Logo"
+        Logo.Size = New Size(149, 151)
+        Logo.SizeMode = PictureBoxSizeMode.StretchImage
+        Logo.TabIndex = 2
+        Logo.TabStop = False
         ' 
         ' RegisterBtn
         ' 
-        RegisterBtn.BackColor = Color.FromArgb(CByte(84), CByte(109), CByte(229))
+        RegisterBtn.BackColor = Color.Maroon
         RegisterBtn.BackgroundImageLayout = ImageLayout.Stretch
         RegisterBtn.FlatAppearance.BorderSize = 3
         RegisterBtn.FlatAppearance.MouseOverBackColor = Color.White
         RegisterBtn.FlatStyle = FlatStyle.Flat
-        RegisterBtn.Font = New Font("Arial", 12.0F)
+        RegisterBtn.Font = New Font("Arial", 12F)
         RegisterBtn.ForeColor = SystemColors.ButtonHighlight
-        RegisterBtn.Location = New Point(159, 350)
+        RegisterBtn.Location = New Point(154, 418)
         RegisterBtn.Name = "RegisterBtn"
         RegisterBtn.Size = New Size(203, 58)
         RegisterBtn.TabIndex = 1
@@ -118,9 +131,9 @@ Partial Class LoginForm
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Arial Narrow", 17.0F)
+        Label1.Font = New Font("Arial Narrow", 17F)
         Label1.ForeColor = SystemColors.ButtonHighlight
-        Label1.Location = New Point(119, 290)
+        Label1.Location = New Point(122, 345)
         Label1.Name = "Label1"
         Label1.Size = New Size(270, 33)
         Label1.TabIndex = 0
@@ -129,9 +142,9 @@ Partial Class LoginForm
         ' Greetings
         ' 
         Greetings.AutoSize = True
-        Greetings.Font = New Font("Arial Black", 28.0F, FontStyle.Bold)
+        Greetings.Font = New Font("Arial Black", 28F, FontStyle.Bold)
         Greetings.ForeColor = Color.White
-        Greetings.Location = New Point(40, 207)
+        Greetings.Location = New Point(34, 264)
         Greetings.Name = "Greetings"
         Greetings.Size = New Size(443, 67)
         Greetings.TabIndex = 0
@@ -143,8 +156,8 @@ Partial Class LoginForm
         ' 
         ' loginBtn
         ' 
-        loginBtn.BackColor = Color.FromArgb(CByte(84), CByte(109), CByte(229))
-        loginBtn.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        loginBtn.BackColor = Color.Maroon
+        loginBtn.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         loginBtn.ForeColor = SystemColors.ButtonHighlight
         loginBtn.Location = New Point(152, 514)
         loginBtn.Name = "loginBtn"
@@ -179,7 +192,7 @@ Partial Class LoginForm
         ' lblLogin
         ' 
         lblLogin.AutoSize = True
-        lblLogin.Font = New Font("Segoe UI", 36.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblLogin.Font = New Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblLogin.Location = New Point(189, 62)
         lblLogin.Name = "lblLogin"
         lblLogin.Size = New Size(193, 81)
@@ -274,7 +287,7 @@ Partial Class LoginForm
         ' 
         ' LoginForm
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1105, 740)
         Controls.Add(CoverDesign)
@@ -289,6 +302,7 @@ Partial Class LoginForm
         Panel3.PerformLayout()
         CoverDesign.ResumeLayout(False)
         CoverDesign.PerformLayout()
+        CType(Logo, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         lognPanel.ResumeLayout(False)
@@ -323,4 +337,5 @@ Partial Class LoginForm
     Friend WithEvents username As TextBox
     Friend WithEvents password As TextBox
     Friend WithEvents passworChng As Label
+    Friend WithEvents Logo As PictureBox
 End Class

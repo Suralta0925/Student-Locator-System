@@ -24,9 +24,10 @@ Partial Class loginDialog
     Private Sub InitializeComponent()
         PictureBox1 = New PictureBox()
         tryagain = New Button()
-        errorLbl = New Label()
+        headerLbl = New Label()
         message = New Label()
         Panel1 = New Panel()
+        closeBtn = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         SuspendLayout()
@@ -44,25 +45,25 @@ Partial Class loginDialog
         ' tryagain
         ' 
         tryagain.BackColor = Color.Red
-        tryagain.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        tryagain.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         tryagain.ForeColor = SystemColors.ButtonHighlight
-        tryagain.Location = New Point(128, 429)
+        tryagain.Location = New Point(125, 406)
         tryagain.Name = "tryagain"
         tryagain.Size = New Size(185, 64)
         tryagain.TabIndex = 1
         tryagain.Text = "Try Again"
         tryagain.UseVisualStyleBackColor = False
         ' 
-        ' errorLbl
+        ' headerLbl
         ' 
-        errorLbl.AutoSize = True
-        errorLbl.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        errorLbl.ForeColor = Color.Red
-        errorLbl.Location = New Point(176, 194)
-        errorLbl.Name = "errorLbl"
-        errorLbl.Size = New Size(110, 50)
-        errorLbl.TabIndex = 2
-        errorLbl.Text = "Error"
+        headerLbl.AutoSize = True
+        headerLbl.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        headerLbl.ForeColor = Color.Red
+        headerLbl.Location = New Point(167, 204)
+        headerLbl.Name = "headerLbl"
+        headerLbl.Size = New Size(110, 50)
+        headerLbl.TabIndex = 2
+        headerLbl.Text = "Error"
         ' 
         ' message
         ' 
@@ -80,14 +81,28 @@ Partial Class loginDialog
         ' 
         Panel1.BackColor = SystemColors.ButtonHighlight
         Panel1.BorderStyle = BorderStyle.FixedSingle
+        Panel1.Controls.Add(closeBtn)
         Panel1.Controls.Add(PictureBox1)
         Panel1.Controls.Add(tryagain)
         Panel1.Controls.Add(message)
-        Panel1.Controls.Add(errorLbl)
+        Panel1.Controls.Add(headerLbl)
         Panel1.Location = New Point(12, 12)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(431, 578)
         Panel1.TabIndex = 4
+        ' 
+        ' closeBtn
+        ' 
+        closeBtn.BackColor = Color.Red
+        closeBtn.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        closeBtn.ForeColor = SystemColors.ButtonHighlight
+        closeBtn.Location = New Point(125, 406)
+        closeBtn.Name = "closeBtn"
+        closeBtn.Size = New Size(185, 64)
+        closeBtn.TabIndex = 4
+        closeBtn.Text = "Yes"
+        closeBtn.UseVisualStyleBackColor = False
+        closeBtn.Visible = False
         ' 
         ' loginDialog
         ' 
@@ -111,7 +126,8 @@ Partial Class loginDialog
 
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents tryagain As Button
-    Friend WithEvents errorLbl As Label
+    Friend WithEvents headerLbl As Label
     Friend WithEvents message As Label
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents closeBtn As Button
 End Class

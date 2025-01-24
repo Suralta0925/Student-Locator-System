@@ -3,7 +3,7 @@
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Splash_Screen.Close()
+        loginDialog.Show()
     End Sub
 
     Private Sub Home_Click(sender As Object, e As EventArgs) Handles Home.Click
@@ -37,5 +37,8 @@
         Main_Screen.Controls.Add(screen)
     End Sub
 
-
+    Private Sub Logout_Click(sender As Object, e As EventArgs) Handles Logout.Click
+        LoginForm.Show()
+        Me.Hide()
+    End Sub
 End Class

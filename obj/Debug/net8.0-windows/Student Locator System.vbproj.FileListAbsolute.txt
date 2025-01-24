@@ -42,3 +42,4 @@ C:\Users\Vince\source\repos\Student Locator System\Student Locator System\obj\De
 C:\Users\Vince\source\repos\Student Locator System\Student Locator System\obj\Debug\net8.0-windows\Student Locator System.genruntimeconfig.cache
 C:\Users\Vince\source\repos\Student Locator System\Student Locator System\obj\Debug\net8.0-windows\ref\Student Locator System.dll
 C:\Users\Vince\source\repos\Student Locator System\Student Locator System\obj\Debug\net8.0-windows\Student_Locator_System.loginDialog.resources
+C:\Users\Vince\source\repos\Student Locator System\Student Locator System\obj\Debug\net8.0-windows\Student Locator System.sourcelink.json

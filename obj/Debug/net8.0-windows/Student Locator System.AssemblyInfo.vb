@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("Student Locator System"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3370ec88ca05c9f13da1bf02f682c1b521b3f08"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("Student Locator System"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("Student Locator System"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _
